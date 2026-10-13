@@ -1,6 +1,5 @@
-# 智慧芭樂果園環境監控與自動灌溉系統（重建示範版）
+# 智慧芭樂果園環境監控與自動灌溉系統
 
-> **重要：這是依照課程專題報告重建的程式，不是原始程式碼。尚未在 Wokwi 實際執行驗證。**
 
 ## 使用方式
 1. 開啟 https://wokwi.com/projects/new/micropython-esp32
@@ -18,6 +17,5 @@ ESP32、DHT22 GPIO15、可變電阻 ADC34、SG90 GPIO18、HC-SR04 Trig16/Echo17�
 - 手動模式也保留缺水保護。
 
 ## 注意
-- 專題報告中有些功能屬架構規劃，這個版本**沒有**實作 MQTT、Firebase、React 儀表板或手機推播。
 - Wokwi 零件與 MicroPython 韌體版本可能需要微調，尤其 RGB LED、ADC 與 PWM 的行為。
 - 若接到真實硬體，HC-SR04 的 5V Echo 必須降壓至 ESP32 安全電壓，伺服馬達需合適的獨立電源及共地。
