@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "author": "Reconstructed from coursework report",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {
+        "env": "micropython-20231227-v1.22.0"
+      }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": -240,
+      "left": -300,
+      "attrs": {
+        "temperature": "29",
+        "humidity": "65"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot",
+      "top": -85,
+      "left": -330,
+      "attrs": {
+        "value": "700"
+      }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo",
+      "top": 155,
+      "left": -305,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "sonar",
+      "top": -235,
+      "left": 200,
+      "attrs": {
+        "distance": "12"
+      }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb",
+      "top": 135,
+      "left": 270,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad",
+      "top": 260,
+      "left": 20,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "dht:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "pot:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "sonar:VCC",
+      "esp:5V",
+      "red",
+      []
+    ],
+    [
+      "servo:V+",
+      "esp:5V",
+      "red",
+      []
+    ],
+    [
+      "dht:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pot:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "sonar:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "servo:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "rgb:COM",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "dht:SDA",
+      "esp:15",
+      "green",
+      []
+    ],
+    [
+      "pot:SIG",
+      "esp:34",
+      "green",
+      []
+    ],
+    [
+      "servo:PWM",
+      "esp:18",
+      "green",
+      []
+    ],
+    [
+      "sonar:TRIG",
+      "esp:16",
+      "green",
+      []
+    ],
+    [
+      "sonar:ECHO",
+      "esp:17",
+      "green",
+      []
+    ],
+    [
+      "rgb:R",
+      "esp:5",
+      "green",
+      []
+    ],
+    [
+      "rgb:G",
+      "esp:4",
+      "green",
+      []
+    ],
+    [
+      "rgb:B",
+      "esp:2",
+      "green",
+      []
+    ],
+    [
+      "keypad:R1",
+      "esp:13",
+      "blue",
+      []
+    ],
+    [
+      "keypad:R2",
+      "esp:12",
+      "blue",
+      []
+    ],
+    [
+      "keypad:R3",
+      "esp:14",
+      "blue",
+      []
+    ],
+    [
+      "keypad:R4",
+      "esp:27",
+      "blue",
+      []
+    ],
+    [
+      "keypad:C1",
+      "esp:26",
+      "blue",
+      []
+    ],
+    [
+      "keypad:C2",
+      "esp:25",
+      "blue",
+      []
+    ],
+    [
+      "keypad:C3",
+      "esp:33",
+      "blue",
+      []
+    ],
+    [
+      "keypad:C4",
+      "esp:32",
+      "blue",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
